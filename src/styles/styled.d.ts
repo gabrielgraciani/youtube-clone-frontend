@@ -17,6 +17,10 @@ declare module 'styled-components' {
       logo: string;
 
       buttonLoginColors: string;
+
+      backgroundFormInput: string;
+      backgroundFormInputBorder: string;
+      backgroundFormButton: string;
     };
   }
 }
