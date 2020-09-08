@@ -13,6 +13,10 @@ declare module 'styled-components' {
 
       iconGrayToGray: string;
       iconGrayToWhite: string;
+
+      logo: string;
+
+      buttonLoginColors: string;
     };
   }
 }

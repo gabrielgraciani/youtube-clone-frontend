@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Logo from '../../assets/logo.svg';
 import { Container } from './styles';
+import Logo2 from '../Logo';
 
 interface Props {
   toggleTheme(): void;
@@ -13,7 +13,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
       <div className="header-item left">
         <div className="menu">menu</div>
         <div className="logo">
-          <img src={Logo} alt="Youtube" />
+          <Logo2 />
         </div>
       </div>
 

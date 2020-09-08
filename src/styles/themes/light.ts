@@ -11,6 +11,8 @@ export default {
     iconGrayToGray: '#606060',
     iconGrayToWhite: '#606060',
 
+    logo: '#282828',
+
     buttonLoginColors: '#065FD4',
   },
 };
