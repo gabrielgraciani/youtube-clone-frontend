@@ -20,16 +20,8 @@ export default createGlobalStyle`
     font-family: 'Roboto', sans-serif;
   }
   :root {
-    --primary: #333;
-    --secondary: #909090;
-
-    --gray: #ccc;
-
     --white: #fff;
-    --sweetWhite: #f8f8f8;
-
     --black: #000;
-
     --red: #f00;
   }
 `;

@@ -8,9 +8,11 @@ declare module 'styled-components' {
       primary: string;
       secundary: string;
 
+      backgroundHeader: string;
       background: string;
-      white: string;
-      black: string;
+
+      iconGrayToGray: string;
+      iconGrayToWhite: string;
     };
   }
 }

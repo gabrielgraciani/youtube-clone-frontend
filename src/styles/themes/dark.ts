@@ -2,11 +2,15 @@ export default {
   title: 'dark',
 
   colors: {
-    primary: '#333',
-    secundary: '#909090',
+    primary: '#fff',
+    secundary: '#aaa',
 
-    background: '#000',
-    white: '#fff',
-    black: '#000',
+    backgroundHeader: '#202020',
+    background: '#181818',
+
+    iconGrayToGray: '#909090',
+    iconGrayToWhite: '#fff',
+
+    buttonLoginColors: '#3EA6FF',
   },
 };

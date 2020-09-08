@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Logo from '../../assets/logo.svg';
 import { Container } from './styles';
 
 interface Props {
@@ -9,9 +10,26 @@ interface Props {
 const Header: React.FC<Props> = ({ toggleTheme }) => {
   return (
     <Container>
-      <button type="button" onClick={toggleTheme}>
-        mudar tema
-      </button>
+      <div className="header-item left">
+        <div className="menu">menu</div>
+        <div className="logo">
+          <img src={Logo} alt="Youtube" />
+        </div>
+      </div>
+
+      <div className="header-item center">
+        <div className="search">search</div>
+      </div>
+
+      <div className="header-item right">
+        <div className="item">icon</div>
+        <div className="item">icon</div>
+        <div className="login">
+          <button type="button" onClick={toggleTheme}>
+            mudar tema
+          </button>
+        </div>
+      </div>
     </Container>
   );
 };

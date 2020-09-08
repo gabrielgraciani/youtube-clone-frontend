@@ -5,8 +5,12 @@ export default {
     primary: '#333',
     secundary: '#909090',
 
-    background: '#f5f5f5',
-    white: '#fff',
-    black: '#000',
+    backgroundHeader: '#fff',
+    background: '#F9F9F9',
+
+    iconGrayToGray: '#606060',
+    iconGrayToWhite: '#606060',
+
+    buttonLoginColors: '#065FD4',
   },
 };
