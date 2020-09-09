@@ -17,6 +17,7 @@ declare module 'styled-components' {
       logo: string;
 
       buttonLoginColors: string;
+      buttonBackgroundActive: string;
 
       backgroundFormInput: string;
       backgroundFormInputBorder: string;

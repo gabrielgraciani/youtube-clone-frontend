@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 56px;
   width: 100%;
-  padding: 0 16px;
+  padding: 9px 16px;
   background: ${props => props.theme.colors.backgroundHeader};
   display: flex;
   align-items: center;
@@ -51,6 +50,12 @@ export const Container = styled.div`
           fill: ${props => props.theme.colors.iconGrayToGray};
         }
       }
+    }
+  }
+
+  .right {
+    button {
+      margin-right: 8px;
     }
   }
 `;

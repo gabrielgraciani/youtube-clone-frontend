@@ -1,5 +1,11 @@
 import React from 'react';
-import { FaBars, FaSearch } from 'react-icons/fa';
+import {
+  FaBars,
+  FaSearch,
+  FaVideo,
+  FaEllipsisV,
+  FaUserCircle,
+} from 'react-icons/fa';
 
 import { Container } from './styles';
 import Logo from '../Logo';
@@ -14,7 +20,7 @@ const Header = ({ toggleTheme }: HeaderProps) => {
     <Container>
       <div className="header-item left">
         <div className="menu">
-          <Button>
+          <Button onClick={() => console.log('click')}>
             <FaBars size={20} />
           </Button>
         </div>
@@ -33,12 +39,17 @@ const Header = ({ toggleTheme }: HeaderProps) => {
       </div>
 
       <div className="header-item right">
-        <div className="item">icon</div>
-        <div className="item">icon</div>
+        <Button onClick={() => console.log('click')}>
+          <FaVideo size={20} />
+        </Button>
+        <Button onClick={() => console.log('click')}>
+          <FaEllipsisV size={20} />
+        </Button>
         <div className="login">
-          <button type="button" onClick={toggleTheme}>
-            mudar tema
-          </button>
+          <Button onClick={toggleTheme} login>
+            <FaUserCircle size={20} />
+            <span>FAZER LOGIN</span>
+          </Button>
         </div>
       </div>
     </Container>

@@ -14,6 +14,7 @@ export default {
     logo: '#282828',
 
     buttonLoginColors: '#065FD4',
+    buttonBackgroundActive: 'rgba(0, 0, 0, 0.2)',
 
     backgroundFormInput: '#fff',
     backgroundFormInputBorder: '#d3d3d3',
