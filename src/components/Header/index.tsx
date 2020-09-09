@@ -5,11 +5,11 @@ import { Container } from './styles';
 import Logo from '../Logo';
 import Button from '../Button';
 
-interface Props {
+interface HeaderProps {
   toggleTheme(): void;
 }
 
-const Header: React.FC<Props> = ({ toggleTheme }) => {
+const Header = ({ toggleTheme }: HeaderProps) => {
   return (
     <Container>
       <div className="header-item left">

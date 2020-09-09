@@ -2,7 +2,11 @@ import React from 'react';
 
 import { Container } from './styles';
 
-const Button: React.FC = ({ children }) => {
+interface ButtonProps {
+  children: React.ReactNode;
+}
+
+const Button = ({ children }: ButtonProps) => {
   return <Container>{children}</Container>;
 };
 
