@@ -14,6 +14,13 @@ export default createGlobalStyle`
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.primary}
   }
+
+  #root{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+  }
+
   *, button, input {
     border: 0;
     outline: 0;

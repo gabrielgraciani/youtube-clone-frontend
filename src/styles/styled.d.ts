@@ -22,6 +22,9 @@ declare module 'styled-components' {
       backgroundFormInput: string;
       backgroundFormInputBorder: string;
       backgroundFormButton: string;
+
+      sideMenuItemHover: string;
+      sideMenuItemActive: string;
     };
   }
 }

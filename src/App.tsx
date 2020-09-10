@@ -8,6 +8,7 @@ import light from './styles/themes/light';
 import dark from './styles/themes/dark';
 
 import Header from './components/Header';
+import SideMenu from './components/SideMenu';
 
 const App: React.FC = () => {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light);
@@ -19,6 +20,7 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <Header toggleTheme={toggleTheme} />
+      <SideMenu />
       <GlobalStyles />
     </ThemeProvider>
   );

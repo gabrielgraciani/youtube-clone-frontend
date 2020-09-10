@@ -19,5 +19,8 @@ export default {
     backgroundFormInput: '#fff',
     backgroundFormInputBorder: '#d3d3d3',
     backgroundFormButton: '#f8f8f8',
+
+    sideMenuItemHover: '#f2f2f2',
+    sideMenuItemActive: '#E5E5E5',
   },
 };

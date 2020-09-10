@@ -45,6 +45,8 @@ export const Container = styled.div`
         border: 1px solid
           ${props => props.theme.colors.backgroundFormInputBorder};
         background: ${props => props.theme.colors.backgroundFormButton};
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
 
         > svg {
           fill: ${props => props.theme.colors.iconGrayToGray};
