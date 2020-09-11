@@ -1,18 +1,16 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import { FaHome, FaFire, FaYoutube, FaHistory } from 'react-icons/fa';
 
 import { Container, Item } from './styles';
 
-const SideMenu = () => {
-  const [open, setOpen] = useState(false);
+interface SideMenuProps {
+  menuOpen: boolean;
+}
 
-  const handleChangeMenu = useCallback(() => {
-    setOpen(!open);
-  }, [open]);
-
+const SideMenu = ({ menuOpen }: SideMenuProps) => {
   return (
-    <Container open={open}>
-      <Item onClick={handleChangeMenu} active>
+    <Container open={menuOpen}>
+      <Item active>
         <FaHome size={20} />
         <span>Início</span>
       </Item>

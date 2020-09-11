@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
 
 import usePersistedState from './hooks/usePersistedState';
@@ -12,15 +12,22 @@ import SideMenu from './components/SideMenu';
 
 const App: React.FC = () => {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light);
+  const [menuOpen, setMenuOpen] = useState(true);
 
   const toggleTheme = useCallback(() => {
     setTheme(theme.title === 'light' ? dark : light);
   }, [theme.title, setTheme]);
 
+  const handleChangeMenu = useCallback(() => {
+    setMenuOpen(!menuOpen);
+  }, [menuOpen]);
+
   return (
     <ThemeProvider theme={theme}>
-      <Header toggleTheme={toggleTheme} />
-      <SideMenu />
+      <Header toggleTheme={toggleTheme} handleChangeMenu={handleChangeMenu} />
+
+      <SideMenu menuOpen={menuOpen} />
+
       <GlobalStyles />
     </ThemeProvider>
   );

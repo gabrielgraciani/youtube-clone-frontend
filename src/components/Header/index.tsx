@@ -13,14 +13,15 @@ import Button from '../Button';
 
 interface HeaderProps {
   toggleTheme(): void;
+  handleChangeMenu(): void;
 }
 
-const Header = ({ toggleTheme }: HeaderProps) => {
+const Header = ({ toggleTheme, handleChangeMenu }: HeaderProps) => {
   return (
     <Container>
       <div className="header-item left">
         <div className="menu">
-          <Button onClick={() => console.log('click')}>
+          <Button onClick={handleChangeMenu}>
             <FaBars size={20} />
           </Button>
         </div>
