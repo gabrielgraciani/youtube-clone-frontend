@@ -10,7 +10,7 @@ import {
   MdSettings,
 } from 'react-icons/md';
 
-import { Container, List, AvatarChannel, Footer, Copyright } from './styles';
+import { Container, List, ListItem, AvatarChannel, Footer } from './styles';
 
 interface SideMenuProps {
   menuOpen: boolean;
@@ -20,83 +20,57 @@ const SideMenu = ({ menuOpen }: SideMenuProps) => {
   return (
     <Container className={menuOpen ? 'openMenu' : ''}>
       <List>
-        <ul>
-          <li className="active">
-            <div>
-              <MdHome size={25} />
-              <span>Início</span>
-            </div>
-          </li>
-          <li>
-            <div>
-              <MdWhatshot size={25} />
-              <span>Em alta</span>
-            </div>
-          </li>
+        <ListItem active>
+          <MdHome size={25} />
+          <span>Início</span>
+        </ListItem>
+        <ListItem>
+          <MdWhatshot size={25} />
+          <span>Em alta</span>
+        </ListItem>
 
-          <li>
-            <div>
-              <MdSubscriptions size={25} />
-              <span>Inscrições</span>
-            </div>
-          </li>
-        </ul>
+        <ListItem>
+          <MdSubscriptions size={25} />
+          <span>Inscrições</span>
+        </ListItem>
       </List>
 
       <List>
-        <ul>
-          <li>
-            <div>
-              <MdHistory size={25} />
-              <span>Histórico</span>
-            </div>
-          </li>
+        <ListItem>
+          <MdHistory size={25} />
+          <span>Histórico</span>
+        </ListItem>
 
-          <li>
-            <div>
-              <MdSlideshow size={25} />
-              <span>Seus vídeos</span>
-            </div>
-          </li>
+        <ListItem>
+          <MdSlideshow size={25} />
+          <span>Seus vídeos</span>
+        </ListItem>
 
-          <li>
-            <div>
-              <MdThumbUp size={25} />
-              <span>Vídeos marcados com "Gostei"</span>
-            </div>
-          </li>
-        </ul>
+        <ListItem>
+          <MdThumbUp size={25} />
+          <span>Vídeos marcados com "Gostei"</span>
+        </ListItem>
       </List>
 
       <List>
         <h3>Inscrições</h3>
 
-        <ul>
-          <li>
-            <div>
-              <AvatarChannel />
-              <span>teste</span>
-            </div>
-          </li>
+        <ListItem>
+          <AvatarChannel />
+          <span>teste</span>
+        </ListItem>
 
-          <li>
-            <div>
-              <AvatarChannel />
-              <span>teste</span>
-            </div>
-          </li>
-        </ul>
+        <ListItem>
+          <AvatarChannel />
+          <span>teste</span>
+        </ListItem>
       </List>
 
       <List>
-        <ul>
-          <li>
-            <div>
-              <MdSettings size={25} />
-              <span>Configurações</span>
-            </div>
-          </li>
-        </ul>
+        <ListItem>
+          <MdSettings size={25} />
+          <span>Configurações</span>
+        </ListItem>
       </List>
 
       <Footer>
@@ -116,9 +90,9 @@ const SideMenu = ({ menuOpen }: SideMenuProps) => {
           <span>Testar os novos recursos</span>
         </div>
 
-        <Copyright>
-          <p>© 2020 Google LLC</p>
-        </Copyright>
+        <div>
+          <span>© 2020 Google LLC</span>
+        </div>
       </Footer>
     </Container>
   );
