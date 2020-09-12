@@ -23,26 +23,20 @@ const SideMenu = ({ menuOpen }: SideMenuProps) => {
         <ul>
           <li className="active">
             <div>
-              <div>
-                <MdHome size={25} />
-              </div>
+              <MdHome size={25} />
               <span>Início</span>
             </div>
           </li>
           <li>
             <div>
-              <div>
-                <MdWhatshot size={25} />
-              </div>
+              <MdWhatshot size={25} />
               <span>Em alta</span>
             </div>
           </li>
 
           <li>
             <div>
-              <div>
-                <MdSubscriptions size={25} />
-              </div>
+              <MdSubscriptions size={25} />
               <span>Inscrições</span>
             </div>
           </li>
@@ -53,27 +47,21 @@ const SideMenu = ({ menuOpen }: SideMenuProps) => {
         <ul>
           <li>
             <div>
-              <div>
-                <MdHistory size={25} />
-              </div>
+              <MdHistory size={25} />
               <span>Histórico</span>
             </div>
           </li>
 
           <li>
             <div>
-              <div>
-                <MdSlideshow size={25} />
-              </div>
+              <MdSlideshow size={25} />
               <span>Seus vídeos</span>
             </div>
           </li>
 
           <li>
             <div>
-              <div>
-                <MdThumbUp size={25} />
-              </div>
+              <MdThumbUp size={25} />
               <span>Vídeos marcados com "Gostei"</span>
             </div>
           </li>
@@ -86,18 +74,14 @@ const SideMenu = ({ menuOpen }: SideMenuProps) => {
         <ul>
           <li>
             <div>
-              <div>
-                <AvatarChannel />
-              </div>
+              <AvatarChannel />
               <span>teste</span>
             </div>
           </li>
 
           <li>
             <div>
-              <div>
-                <AvatarChannel />
-              </div>
+              <AvatarChannel />
               <span>teste</span>
             </div>
           </li>
@@ -108,9 +92,7 @@ const SideMenu = ({ menuOpen }: SideMenuProps) => {
         <ul>
           <li>
             <div>
-              <div>
-                <MdSettings size={25} />
-              </div>
+              <MdSettings size={25} />
               <span>Configurações</span>
             </div>
           </li>

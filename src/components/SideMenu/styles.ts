@@ -110,18 +110,10 @@ export const List = styled.div`
         font-size: 1.4rem;
         line-height: 1.8rem;
 
-        div {
-          width: 24px;
-          height: 24px;
-          margin-right: 2.4rem;
-
-          svg {
-            width: 24px;
-            height: 24px;
-          }
-        }
-
         span {
+          width: 75%;
+          display: block;
+          margin-left: 2.4rem;
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
@@ -187,8 +179,6 @@ export const AvatarChannel = styled.div`
   border-radius: 50%;
 
   background-color: #606060;
-
-  margin-right: 2.4rem;
 `;
 
 export const Copyright = styled.div`
