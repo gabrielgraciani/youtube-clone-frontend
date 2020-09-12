@@ -50,7 +50,7 @@ export const Container = styled.div<SideMenuProps>`
   ${Item} {
     flex-direction: ${props => (props.open ? 'row' : 'column')};
     justify-content: ${props => (props.open ? 'flex-start' : 'center')};
-    padding: ${props => (props.open ? '15px 0 15px 25px' : '15px 0')};
+    padding: ${props => (props.open ? '8px 0 8px 25px' : '15px 0')};
 
     span {
       margin-left: ${props => (props.open ? '25px' : '0px')};

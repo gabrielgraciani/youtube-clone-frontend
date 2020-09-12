@@ -1,5 +1,12 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import { FaHome, FaFire, FaYoutube, FaHistory } from 'react-icons/fa';
+import {
+  FaHome,
+  FaFire,
+  FaYoutube,
+  FaHistory,
+  FaThumbsUp,
+} from 'react-icons/fa';
 
 import { Container, Item } from './styles';
 
@@ -22,10 +29,19 @@ const SideMenu = ({ menuOpen }: SideMenuProps) => {
         <FaYoutube size={20} />
         <span>Inscrições</span>
       </Item>
-      <Item active={false}>
-        <FaHistory size={20} />
-        <span>Histórico</span>
-      </Item>
+
+      {menuOpen && (
+        <>
+          <Item active={false}>
+            <FaHistory size={20} />
+            <span>Histórico</span>
+          </Item>
+          <Item active={false}>
+            <FaThumbsUp size={20} />
+            <span>Vídeos marcados com "Gostei"</span>
+          </Item>
+        </>
+      )}
     </Container>
   );
 };
