@@ -18,7 +18,7 @@ interface SideMenuProps {
 
 const SideMenu = ({ menuOpen }: SideMenuProps) => {
   return (
-    <Container className={menuOpen ? 'openMenu' : ''}>
+    <Container open={menuOpen}>
       <List>
         <ListItem active>
           <MdHome size={25} />
@@ -35,65 +35,69 @@ const SideMenu = ({ menuOpen }: SideMenuProps) => {
         </ListItem>
       </List>
 
-      <List>
-        <ListItem>
-          <MdHistory size={25} />
-          <span>Histórico</span>
-        </ListItem>
+      {menuOpen && (
+        <>
+          <List>
+            <ListItem>
+              <MdHistory size={25} />
+              <span>Histórico</span>
+            </ListItem>
 
-        <ListItem>
-          <MdSlideshow size={25} />
-          <span>Seus vídeos</span>
-        </ListItem>
+            <ListItem>
+              <MdSlideshow size={25} />
+              <span>Seus vídeos</span>
+            </ListItem>
 
-        <ListItem>
-          <MdThumbUp size={25} />
-          <span>Vídeos marcados com "Gostei"</span>
-        </ListItem>
-      </List>
+            <ListItem>
+              <MdThumbUp size={25} />
+              <span>Vídeos marcados com "Gostei"</span>
+            </ListItem>
+          </List>
 
-      <List>
-        <h3>Inscrições</h3>
+          <List>
+            <h3>Inscrições</h3>
 
-        <ListItem>
-          <AvatarChannel />
-          <span>teste</span>
-        </ListItem>
+            <ListItem>
+              <AvatarChannel />
+              <span>teste</span>
+            </ListItem>
 
-        <ListItem>
-          <AvatarChannel />
-          <span>teste</span>
-        </ListItem>
-      </List>
+            <ListItem>
+              <AvatarChannel />
+              <span>teste</span>
+            </ListItem>
+          </List>
 
-      <List>
-        <ListItem>
-          <MdSettings size={25} />
-          <span>Configurações</span>
-        </ListItem>
-      </List>
+          <List>
+            <ListItem>
+              <MdSettings size={25} />
+              <span>Configurações</span>
+            </ListItem>
+          </List>
 
-      <Footer>
-        <div>
-          <span>Sobre</span>
-          <span>Imprensa</span>
-          <span>Direitos autorais</span>
-          <span>Criadores de conteúdo</span>
-          <span>Publicidade</span>
-          <span>Desenvolvedores</span>
-        </div>
+          <Footer>
+            <div>
+              <span>Sobre</span>
+              <span>Imprensa</span>
+              <span>Direitos autorais</span>
+              <span>Criadores de conteúdo</span>
+              <span>Publicidade</span>
+              <span>Desenvolvedores</span>
+            </div>
 
-        <div>
-          <span>Termos</span>
-          <span>Privacidade</span>
-          <span>Política e Segurança</span>
-          <span>Testar os novos recursos</span>
-        </div>
+            <div>
+              <span>Termos</span>
+              <span>Privacidade</span>
+              <span>Política e Segurança</span>
+              <span>Testar os novos recursos</span>
+            </div>
 
-        <div>
-          <span>© 2020 Google LLC</span>
-        </div>
-      </Footer>
+            <div>
+              <span>© 2020 Google LLC</span>
+            </div>
+          </Footer>
+        </>
+      )}
     </Container>
   );
 };
