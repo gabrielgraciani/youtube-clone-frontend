@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  grid-area: HEADER;
+
   width: 100%;
   padding: 9px 16px;
   background: ${props => props.theme.colors.backgroundHeader};
@@ -41,7 +43,7 @@ export const Container = styled.div`
         background: ${props => props.theme.colors.backgroundFormInput};
       }
       button {
-        padding: 5px 22px;
+        padding: 5px 22px 0;
         border: 1px solid
           ${props => props.theme.colors.backgroundFormInputBorder};
         background: ${props => props.theme.colors.backgroundFormButton};
@@ -58,6 +60,7 @@ export const Container = styled.div`
   .right {
     button {
       margin-right: 8px;
+      padding: 6px;
     }
   }
 `;

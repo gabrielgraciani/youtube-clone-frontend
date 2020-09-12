@@ -1,11 +1,12 @@
 import React from 'react';
 import {
-  FaBars,
-  FaSearch,
-  FaVideo,
-  FaEllipsisV,
-  FaUserCircle,
-} from 'react-icons/fa';
+  MdMenu,
+  MdSearch,
+  MdVideoCall,
+  MdNotifications,
+  MdAccountCircle,
+  MdMoreVert,
+} from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 import { Container } from './styles';
@@ -23,7 +24,7 @@ const Header = ({ toggleTheme, handleChangeMenu }: HeaderProps) => {
       <div className="header-item left">
         <div className="menu">
           <Button onClick={handleChangeMenu}>
-            <FaBars size={20} />
+            <MdMenu size={25} />
           </Button>
         </div>
         <Link to="/" className="logo">
@@ -35,21 +36,24 @@ const Header = ({ toggleTheme, handleChangeMenu }: HeaderProps) => {
         <div className="search">
           <input type="text" placeholder="Pesquisar" />
           <button type="button">
-            <FaSearch size={13} />
+            <MdSearch size={20} />
           </button>
         </div>
       </div>
 
       <div className="header-item right">
         <Button onClick={() => console.log('click')}>
-          <FaVideo size={20} />
+          <MdVideoCall size={25} />
         </Button>
         <Button onClick={() => console.log('click')}>
-          <FaEllipsisV size={20} />
+          <MdNotifications size={25} />
+        </Button>
+        <Button onClick={() => console.log('click')}>
+          <MdMoreVert size={25} />
         </Button>
         <div className="login">
           <Button onClick={toggleTheme} login>
-            <FaUserCircle size={20} />
+            <MdAccountCircle size={25} />
             <span>FAZER LOGIN</span>
           </Button>
         </div>

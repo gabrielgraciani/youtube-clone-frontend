@@ -41,12 +41,26 @@ export default createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  display: flex;
-  flex-grow: 1;
-`;
+  display: grid;
 
-export const Content = styled.div`
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+  grid-template-columns: 24rem auto;
+  grid-template-rows: 5.6rem auto;
+
+  grid-template-areas:
+    'HEADER HEADER'
+    'MENU MAIN';
+
+  height: 100vh;
+
+  &.openMenu {
+    grid-template-columns: 0 100vw;
+  }
+
+  @media screen and (max-width: 525px) {
+    grid-template-columns: 0 auto;
+
+    &.openMenu {
+      grid-template-columns: 100vw 0;
+    }
+  }
 `;

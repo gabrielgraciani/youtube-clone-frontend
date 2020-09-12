@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import usePersistedState from './hooks/usePersistedState';
 
-import GlobalStyles, { Container, Content } from './styles/GlobalStyles';
+import GlobalStyles, { Container } from './styles/GlobalStyles';
 import light from './styles/themes/light';
 import dark from './styles/themes/dark';
 
@@ -28,16 +28,16 @@ const App: React.FC = () => {
   return (
     <Router>
       <ThemeProvider theme={theme}>
-        <Header toggleTheme={toggleTheme} handleChangeMenu={handleChangeMenu} />
-
         <Container>
+          <Header
+            toggleTheme={toggleTheme}
+            handleChangeMenu={handleChangeMenu}
+          />
+
           <SideMenu menuOpen={menuOpen} />
 
-          <Content>
-            <Routes />
-          </Content>
+          <Routes />
         </Container>
-
         <GlobalStyles />
       </ThemeProvider>
     </Router>
