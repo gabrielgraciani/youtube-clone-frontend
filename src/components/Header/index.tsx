@@ -6,6 +6,7 @@ import {
   FaEllipsisV,
   FaUserCircle,
 } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 import { Container } from './styles';
 import Logo from '../Logo';
@@ -25,9 +26,9 @@ const Header = ({ toggleTheme, handleChangeMenu }: HeaderProps) => {
             <FaBars size={20} />
           </Button>
         </div>
-        <div className="logo">
+        <Link to="/" className="logo">
           <Logo />
-        </div>
+        </Link>
       </div>
 
       <div className="header-item center">

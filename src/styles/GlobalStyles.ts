@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   * {
@@ -38,4 +38,15 @@ export default createGlobalStyle`
     --black: #000;
     --red: #f00;
   }
+`;
+
+export const Container = styled.div`
+  display: flex;
+  flex-grow: 1;
+`;
+
+export const Content = styled.div`
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 `;

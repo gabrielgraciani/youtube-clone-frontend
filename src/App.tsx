@@ -1,11 +1,14 @@
 import React, { useCallback, useState } from 'react';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import usePersistedState from './hooks/usePersistedState';
 
-import GlobalStyles from './styles/GlobalStyles';
+import GlobalStyles, { Container, Content } from './styles/GlobalStyles';
 import light from './styles/themes/light';
 import dark from './styles/themes/dark';
+
+import Routes from './routes';
 
 import Header from './components/Header';
 import SideMenu from './components/SideMenu';
@@ -23,13 +26,21 @@ const App: React.FC = () => {
   }, [menuOpen]);
 
   return (
-    <ThemeProvider theme={theme}>
-      <Header toggleTheme={toggleTheme} handleChangeMenu={handleChangeMenu} />
+    <Router>
+      <ThemeProvider theme={theme}>
+        <Header toggleTheme={toggleTheme} handleChangeMenu={handleChangeMenu} />
 
-      <SideMenu menuOpen={menuOpen} />
+        <Container>
+          <SideMenu menuOpen={menuOpen} />
 
-      <GlobalStyles />
-    </ThemeProvider>
+          <Content>
+            <Routes />
+          </Content>
+        </Container>
+
+        <GlobalStyles />
+      </ThemeProvider>
+    </Router>
   );
 };
 
