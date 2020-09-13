@@ -3,7 +3,7 @@ export default {
 
   colors: {
     primary: '#333',
-    secundary: '#909090',
+    secundary: '#606060',
 
     backgroundHeader: '#fff',
     background: '#F9F9F9',
