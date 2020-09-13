@@ -24,7 +24,7 @@ export const Container = styled.main`
 export const GridVideos = styled.div`
   display: grid;
 
-  grid-template-columns: repeat(auto-fit, 360px);
+  grid-template-columns: repeat(auto-fit, 355px);
   grid-gap: 4rem 1rem;
   margin-top: 1.6rem;
   justify-content: center;
@@ -33,7 +33,7 @@ export const GridVideos = styled.div`
 export const Video = styled.div``;
 
 export const VideoThumb = styled.div`
-  width: 360px;
+  width: 355px;
   height: 200px;
   background-color: #606060;
 `;
