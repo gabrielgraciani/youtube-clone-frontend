@@ -24,16 +24,17 @@ export const Container = styled.main`
 export const GridVideos = styled.div`
   display: grid;
 
-  grid-template-columns: repeat(auto-fit, 250px);
+  grid-template-columns: repeat(auto-fit, 360px);
   grid-gap: 4rem 1rem;
   margin-top: 1.6rem;
+  justify-content: center;
 `;
 
 export const Video = styled.div``;
 
 export const VideoThumb = styled.div`
-  width: 250px;
-  height: 140px;
+  width: 360px;
+  height: 200px;
   background-color: #606060;
 `;
 
