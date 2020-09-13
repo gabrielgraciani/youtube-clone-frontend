@@ -10,17 +10,15 @@ import {
 import { Link } from 'react-router-dom';
 
 import { useMenu } from '../../hooks/useMenu';
+import { useTheme } from '../../hooks/useTheme';
 
 import { Container } from './styles';
 import Logo from '../Logo';
 import Button from '../Button';
 
-interface HeaderProps {
-  toggleTheme(): void;
-}
-
-const Header = ({ toggleTheme }: HeaderProps) => {
+const Header = () => {
   const { handleClickMenu } = useMenu();
+  const { toggleTheme } = useTheme();
 
   return (
     <Container>
