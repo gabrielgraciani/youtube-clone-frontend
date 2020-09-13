@@ -17,6 +17,8 @@ import { Container, List, ListItem, AvatarChannel, Footer } from './styles';
 const SideMenu = () => {
   const { openMenu } = useMenu();
 
+  console.log('oahsd', openMenu);
+
   return (
     <Container open={openMenu}>
       <List>

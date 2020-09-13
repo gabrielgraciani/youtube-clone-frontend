@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   * {
@@ -37,30 +37,5 @@ export default createGlobalStyle`
     --white: #fff;
     --black: #000;
     --red: #f00;
-  }
-`;
-
-export const Container = styled.div`
-  display: grid;
-
-  grid-template-columns: 24rem auto;
-  grid-template-rows: 5.6rem auto;
-
-  grid-template-areas:
-    'HEADER HEADER'
-    'MENU MAIN';
-
-  height: 100vh;
-
-  &.openMenu {
-    grid-template-columns: 0 100vw;
-  }
-
-  @media screen and (max-width: 525px) {
-    grid-template-columns: 0 auto;
-
-    &.openMenu {
-      grid-template-columns: 100vw 0;
-    }
   }
 `;
