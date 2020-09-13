@@ -10,15 +10,15 @@ import {
   MdSettings,
 } from 'react-icons/md';
 
+import { useMenu } from '../../hooks/useMenu';
+
 import { Container, List, ListItem, AvatarChannel, Footer } from './styles';
 
-interface SideMenuProps {
-  menuOpen: boolean;
-}
+const SideMenu = () => {
+  const { openMenu } = useMenu();
 
-const SideMenu = ({ menuOpen }: SideMenuProps) => {
   return (
-    <Container open={menuOpen}>
+    <Container open={openMenu}>
       <List>
         <ListItem active>
           <MdHome size={25} />
@@ -35,7 +35,7 @@ const SideMenu = ({ menuOpen }: SideMenuProps) => {
         </ListItem>
       </List>
 
-      {menuOpen && (
+      {openMenu && (
         <>
           <List>
             <ListItem>

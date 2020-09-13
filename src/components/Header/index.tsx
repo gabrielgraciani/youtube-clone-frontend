@@ -9,21 +9,24 @@ import {
 } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
+import { useMenu } from '../../hooks/useMenu';
+
 import { Container } from './styles';
 import Logo from '../Logo';
 import Button from '../Button';
 
 interface HeaderProps {
   toggleTheme(): void;
-  handleChangeMenu(): void;
 }
 
-const Header = ({ toggleTheme, handleChangeMenu }: HeaderProps) => {
+const Header = ({ toggleTheme }: HeaderProps) => {
+  const { handleClickMenu } = useMenu();
+
   return (
     <Container>
       <div className="header-item left">
         <div className="menu">
-          <Button onClick={handleChangeMenu}>
+          <Button onClick={handleClickMenu}>
             <MdMenu size={25} />
           </Button>
         </div>
