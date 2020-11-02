@@ -6,7 +6,7 @@ export const Container = styled.main`
   display: flex;
   flex-direction: column;
   margin: 3.6rem 0 0 2.4rem;
-  padding: 1.2rem 0;
+  padding: 1.2rem 2rem 1.2rem 0;
   overflow-y: scroll;
 
   ::-webkit-scrollbar {
@@ -24,8 +24,8 @@ export const Container = styled.main`
 export const GridVideos = styled.div`
   display: grid;
 
-  grid-template-columns: repeat(auto-fit, 355px);
-  grid-gap: 4rem 1rem;
+  grid-template-columns: repeat(auto-fit, 350px);
+  grid-gap: 4rem 1.2rem;
   margin-top: 1.6rem;
   justify-content: center;
 `;
